@@ -13,6 +13,8 @@ function variableModification(a) {
   var plus5;
   var asString;
   var yourNumberIs;
+  plus5 = a +5;
+  asString = a+'';
   //your code here
 
   //end your code
