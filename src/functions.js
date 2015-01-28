@@ -32,14 +32,15 @@ var barType = typeof bar;
 */
 
 //your code here
-bar = function  (doubleArray) {
-	for (var i = 0; i < doubleArray.length; i++) {
-		doubleArray[i] = doubleArray[i] *2;
-		if (isNaN(doubleArray[i])) 
-			{ return false};
-	}
-	return true;
-	// body...
+bar = function (doubleArray) {
+  var i;
+  for (i = 0; i < doubleArray.length; i++) {
+    doubleArray[i] = doubleArray[i] * 2;
+    if (isNaN(doubleArray[i])) {
+      return false;
+    }
+  }
+  return true;
 }
 //end your code
 
@@ -75,22 +76,25 @@ function GitLog(hash, date, message) {
 * @return {array.<GitLog>} - return an array GitLog instances
 */
 
-function parseGit (logArray) {
-	
-var gitArray = new Array(2);
-
-
-for (var i = 0; i <logArray.length; i++) {
-	var x = logArray[i].indexOf(" ");
-	var hash = logArray[i].slice(0,x);
-	var y = logArray[i].indexOf(" \"");
-	var date = logArray[i].slice(x+1,y);
-	var d = new Date(date);
-	var message =logArray[i].slice(y+2, logArray[i].length-1);
-	gitArray[i] = new GitLog(hash, d, message);
-}
-
-return gitArray;
+function parseGit(logArray) {
+  var gitArray = new Array(2);
+  var i;
+  var x;
+  var y;
+  var hash;
+  var date;
+  var d;
+  var message;
+  for (i = 0; i < logArray.length; i++) {
+    x = logArray[i].indexOf(" ");
+    hash = logArray[i].slice(0, x);
+    y = logArray[i].indexOf(" \"");
+    date = logArray[i].slice(x + 1, y);
+    d = new Date(date);
+    message = logArray[i].slice(y + 2, logArray[i].length - 1);
+    gitArray[i] = new GitLog(hash, d, message);
+  }
+  return gitArray;
 }
 //your code here
 

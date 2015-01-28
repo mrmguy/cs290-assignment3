@@ -9,15 +9,15 @@ yourNumberIs: a string that says "Your Number is `x`." where `x` is replaced by
 in input `a`
 a: the original a number
 */
+
+//your code here
 function variableModification(a) {
   var plus5;
   var asString;
   var yourNumberIs;
-  plus5 = a +5;
-  asString = a+'';
+  plus5 = a + 5;
+  asString = String(a);
   yourNumberIs = "Your Number is " + a;
-  //your code here
-
   //end your code
   return [plus5, asString, yourNumberIs, a];
 }
@@ -32,12 +32,9 @@ false otherwise
 */
 function isString(b) {
   if (typeof b === 'string') {
-  return true;
-}
-else {
+    return true;
+  }
   return false;
-}
-  //end your code
 }
 
 /*
@@ -49,9 +46,7 @@ return true if c is null, false otherwise
 */
 function isNull(c) {
   if (c ===  null && typeof c === 'object') {
-  return true;
-}
-else {
+    return true;
+  }
   return false;
-}
 }
