@@ -76,7 +76,7 @@ function MessageLog(user) {
 //your code here
 MessageLog.prototype.lastReceivedMessage = function () {
   return this.messages[0];
-}
+};
 //end your code
 
 /**

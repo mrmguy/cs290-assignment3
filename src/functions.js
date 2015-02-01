@@ -13,8 +13,8 @@
 */
 
 //your code here
-function uselessFunction () {
-	return null;
+function uselessFunction() {
+  return null;
 }
 //end your code
 
@@ -41,7 +41,7 @@ bar = function (doubleArray) {
     }
   }
   return true;
-}
+};
 //end your code
 
 /**
@@ -52,9 +52,9 @@ bar = function (doubleArray) {
 * @property {string} message - the commit message
 */
 function GitLog(hash, date, message) {
-    this.hash = hash;
-    this.date = date;
-    this.message = message;
+  this.hash = hash;
+  this.date = date;
+  this.message = message;
 }
 
 /**
@@ -96,6 +96,5 @@ function parseGit(logArray) {
   }
   return gitArray;
 }
-//your code here
 
 //end your code
